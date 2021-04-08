@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { createExpressionWithTypeArguments } from 'typescript';
 import {cartTotal} from '../actions/cartActions';
 
 class CartTotal extends Component {
