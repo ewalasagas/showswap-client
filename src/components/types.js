@@ -1,0 +1,19 @@
+export const GET_TICKETS = "GET_TICKETS";
+export const FILTER_TICKETS_BY_GENRE = "FILTER_TICKETS_BY_GENRE";
+export const GET_GENRES = "GET_GENRES";
+export const ORDER_TICKETS_BY_PRICE = "ORDER_TICKETS_BY_PRICE";
+export const ADD_TO_CART = "ADD_TO_CART";
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+export const CART_TOTAL = "CART_TOTAL";
+
+//FOR EDIT CART
+export const GET_TICKETS_BY_USER = "GET_TICKETS_BY_USER";
+
+//FOR ORDER CART
+export const CREATE_ORDER = "CREATE_ORDER";
+export const CLEAR_ORDER = "CLEAR_ORDER";
+export const CLEAR_CART= "CLEAR_CART";
+
+//FOR GOOGLE AUTH LOGIN
+export const SIGN_IN = 'SIGN_IN';
+export const SIGN_OUT = 'SIGN_OUT';

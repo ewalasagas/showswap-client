@@ -1,0 +1,666 @@
+/*************** HEADER *****************/
+// .header {
+//     background-attachment: fixed;
+//     background-size: cover;
+//     background-position: center;
+//     overflow: hidden;
+
+//     &__video {
+//         top: 0;
+//         min-width: 100%; 
+//     }
+
+//     &__video_overlay {
+//         top: 0;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         color: white;
+//         margin: 0 auto;
+//         position: absolute;
+//     }
+
+//     &__description-container {
+//         position: absolute;
+//         left: 50%;
+//         top: 50%;
+//         transform: translate(-50%, -50%);
+//         font-size: 20px;
+//         font-weight: 200;
+//     }
+
+//     &__description-title {
+//         color: white;
+//         text-transform: uppercase;
+//         font-size: 4rem;
+//         letter-spacing: 1px;
+//         word-spacing: 5px;
+//         margin-bottom: 1rem;
+
+//         &:after{
+//             content:" ";
+//             display: block;
+//             height: 0.3rem;
+//             width: 20rem;
+//             margin: 0;
+//             margin-top: 1rem;
+//             background-color: white
+//         }
+//     }
+// }
+
+html {
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+/*************** LOGIN *****************/
+.login {
+    background-image: url("https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?cs=srgb&dl=pexels-vishnu-r-nair-1105666.jpg&fm=jpg");
+}
+.login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 30px;
+    // padding-top: 40px;
+    // padding-bottom: 40px;
+    border-radius: 10%;
+    width: 20rem;
+    height: 30rem;
+    position: absolute;
+    margin-top: 10%;
+    // margin: 10% 0% 0% 35%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.9;
+}
+
+.form-signin {
+    width: 100%;
+    // max-width: 330px;
+    // padding: 15px;
+    // margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    opacity: 1;
+
+    .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .form-control:focus {
+        z-index: 2;
+    }
+
+    #inputEmail {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    #inputPassword {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+.login-registration-icon {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+/*************** NAVIGATION *****************/
+.navigation {
+    // position: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+.circle {
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-flex;
+    transform: translate(-10%, -15%);
+
+    &-icons {
+        transform: translate(40%, 40%);
+    }
+}
+
+
+.main-nav {
+    list-style: none;
+    margin-right: 5%; 
+    margin-bottom: 0;
+    color: white;
+    position: fixed;
+    z-index: 50;
+
+    & .title {
+        padding-top: 1rem;
+    }
+
+    & .move-left {
+        padding-top: 1rem;
+        display: inline-flex;
+        right: 0;
+    }
+
+    & li {
+        display: inline-block;
+        margin-left: 40px; 
+
+        & a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-size: 100%;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.4s;
+
+            &:hover,
+            &:active {
+                color: white;
+                transition: color 0.3s;
+                border-bottom: 2px solid white; 
+            }
+        }
+    }
+}
+
+.btn-signout:hover,
+.btn-signout:active {
+    color: white;
+    transition: color 0.3s;
+    border-bottom: 2px solid white; 
+}
+
+
+
+.navigation-icon {
+    display: inline-flex;
+}
+
+/*************** CAROUSEL IMAGES *****************/
+.carousel {
+    &-all {
+        margin-top: 40px;
+    }
+
+    &-container {
+        width: 80%;
+        height: 20rem;
+        overflow: hidden;
+        border-radius: 3rem 3rem 3rem 3rem;
+        position: relative;
+    }
+    
+    &-img {
+        width: 100%;
+        height: auto;
+        filter: grayscale(100%);
+        transition: filter 0.5s;
+        &:hover {
+            filter: none;
+            transition: filter 0.5s
+        }
+    }
+
+    &-item {
+        text-align: center;
+        justify-content:center;
+        left: 10%;
+    }
+
+    &-title {
+        opacity: 80%;
+        background-color: purple;
+        margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.carousel-control-next {
+    opacity: 100%;
+    background-color: purple;
+    border-radius: 50%;
+    top: 50%;
+    right: 8%;
+    height: 5vw;
+    width: 5vw;
+}
+.carousel-control-prev {
+    opacity: 100%;
+    background-color: purple;
+    border-radius: 50%;
+    top: 50%;
+    left: 8%;
+    height: 5vw;
+    width: 5vw;
+}
+
+
+/*************** CONCERTS *****************/
+// .modal-conert-view {
+//     // height: 200%;
+// }
+
+.concert-lists {
+    text-align: center; 
+}
+
+.clearfix {
+    zoom: 1; 
+    &:after {
+        content: '.';
+        clear: both;
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+.concerts {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0; 
+
+    // & li {
+    //     // display: block;
+    //     // float: left;
+    //     // width: 30%;
+    //     // height: auto; 
+    //     // overflow: hidden;
+    // }
+}
+
+.concert-photo {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+
+    &:hover .image {
+        transform: scale(1.15);
+        transition: filter 0.5s, opacity 0.5s; 
+    }
+
+    &:hover .concert-overlay {
+        opacity: 1;
+        height: 100%; 
+    }
+}
+
+.image {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 200px;
+    transform: scale(1);
+    transition: transform 1s, opacity 0.5s;
+    filter: grayscale(100%); 
+
+    &:hover {
+        filter: none;
+        // transform: scale(1.15);
+        transition: filter 0.5s, opacity 0.5s; 
+     
+    }
+}
+
+// @media only screen and (min-width: 635px) {
+    img {
+      width: 28vw;
+      height: auto;
+    }
+
+@media only screen and (max-width: 635px) {
+    img {
+      width: 75vw;
+      height: auto;
+    }
+
+    .image {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 30vh;
+        transform: scale(1);
+        transition: transform 1s, opacity 0.5s;
+        filter: grayscale(100%); 
+
+        &:hover {
+            filter: none;
+            // transform: scale(1.15);
+            transition: filter 0.5s, opacity 0.5s; 
+        
+        }
+    }
+  }
+
+.concert-overlay {
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0%;
+    width: 100%;
+    overflow: hidden; 
+}
+
+.concert-text {
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    opacity: 1;
+    padding: 0;
+    margin-top: 20%;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    &:after {
+        content: " ";
+        display: block;
+        height: 2px;
+        width: 10vw;
+        margin: 0 auto;
+        background-color: white; 
+    }
+}
+
+/****************** FILTERS ******************/
+.tickets-selling {
+    margin-top: 50px;
+    color: white;                              
+    text-align: center;
+    &-line {
+        border-top: 1px solid white;
+        width: 20%
+    }
+}
+
+.filter {
+    padding: 0;
+    margin: 0;
+}
+
+// .filter {
+//     & .btn{
+//         margin: 1rem;
+//     }
+//     &-result{
+//         color: white;
+//     }
+
+//     &-size {
+//         margin: 1rem;
+//         display: inline-flex;
+//     }
+//     &-dropdown {
+//         display: inline-flex;
+//     }
+// }
+
+.btn-outline-light {
+    border: 1px black;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+}
+/************** TICKET MODAL ****************/
+
+.close-modal-popup {
+    position: absolute;
+    margin: 10px;
+    right: 0;
+    top: 0;
+    z-index: 1; 
+}
+
+.ticket-image-modal {
+    width: 100%;
+    height: auto;
+}
+
+.product-details {
+    align-content: center;
+    justify-content: center;
+}
+
+.product-description {
+    width: 100%;
+    &-price {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+/******* STAR RATING ********/
+.fa {
+    font-size: 25px;
+}
+    .checked {
+color: orange;
+}
+
+/*********** CHECKOUT CART ************/
+.timer {
+    color: red
+}
+
+img.cart-imagecontainer-img {
+    height: 100%;
+    min-width: 100%;
+}
+
+.cart {
+    &-items {
+        padding: 0;
+        width: 100%;
+        list-style-type: none;
+    }
+
+    &-imagecontainer{
+        width: 200px;
+        height: auto;
+        overflow: hidden;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        &-img{ 
+            margin: 0px 0px 0px 0px;
+        }
+    }
+
+
+
+    &-items {
+        // margin-bottom: 20px;
+        // display: inline-flex;
+        // margin-left: 50%;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        border-bottom: 1px solid grey;
+        text-align: center;
+    }
+
+    &-items-description {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        border-right: 0.5px solid grey;
+        border-bottom: none;
+    }
+
+    @media only screen and (max-width: 575px) {
+        &-items-description {
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            border-right: none;
+        }
+    }
+
+    &-total {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 2rem;
+    }
+    
+}
+
+
+
+
+.bold {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cart-items-align-left {
+    text-align: left;
+}
+
+@media only screen and (max-width: 575px) {
+    .cart-items-align-left {
+        text-align: center;
+    }
+}
+
+.cart-item-button {
+    margin: 30px;
+}
+
+.stripe {
+    border: 1px solid grey;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.checkout-btn {
+    margin-bottom: 20px;
+}
+
+/************ DASHBOARD **************/
+
+.dashboard {
+    text-align: center;
+}
+
+.dashboard-btn-bcg {
+    background-color: black;
+}
+
+.dashboard-btn-outline {
+    border: 3px solid white;
+}
+
+.admin {
+    &-header {
+        background-image: url("https://i.ibb.co/k639V5r/pexels-bruno-thethe-1910225.jpg");
+        background-size: cover;
+        height: 100%;
+        color: white;
+    }
+    &-title {
+        color: white;
+    }
+    &-welcome {
+        color: white;
+        font-family: 'Bebas Neue', cursive;
+    }
+}
+
+.user-header {
+    background-image: url("https://i.ibb.co/PD5DMB3/pexels-aleksandar-pasaric-3310691.jpg");
+    background-size: cover;
+    height: 100%;
+    color: white;
+}
+
+.genre-header{
+    background-image: url("https://i.ibb.co/3z63XxL/pexels-steve-johnson-2179373.jpg");
+    background-size: cover;
+    height: 100%;
+    color: white;
+}
+
+.genre-title {
+    color: white;
+}
+/************ CREATE TICKETS **************/
+.create-header {
+    background-image: url("https://i.ibb.co/PNt93zd/pexels-teddy-yang-2263435.jpg");
+    background-size: cover;
+    height: 100%;
+    color: white;
+}
+/************** FOOTER ****************/
+
+
+.ticket-container {
+    margin-bottom: 8rem;
+}
+
+.footer {
+    position: relative;
+ 
+    &:before,
+    &:after {
+        background: inherit;
+        content: '';
+        display: block;
+        height: 75%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: -1
+    }
+
+    &:before {
+        top: 0;
+        transform: skewY(-4deg);
+        transform-origin: 0% 0;
+    }
+
+    &:after {
+        bottom: 0;
+        transform: skewY(0deg);
+        transform-origin: 100%;
+    }
+}
