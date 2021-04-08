@@ -38,7 +38,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "compile:sass": "node-sass src/sass/main.scss public/index.css -w"
+    "compile:sass": "node-sass src/sass/main.scss public/index.css"
   },
   "eslintConfig": {
     "extends": [
